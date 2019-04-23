@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>emailTitle</title>
+<style type="text/css">
+
+/* vvvvv CLIENT-SPECIFIC STYLES vvvvv */
+
+table, td {
+	mso-table-lspace: 0pt;
+	mso-table-rspace: 0pt;
+}
+img {
+	-ms-interpolation-mode: bicubic;
+}
+/*ReadMsgBody - Forces Hotmail to display at full width. ExternalClass - Hotmail table centering fix.*/
+.ReadMsgBody, .ExternalClass {
+	width: 100%;
+}
+/*Forces Hotmail to display normal line spacing*/
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+	line-height: 100%;
+}
+/* vvvvv RESET STYLES vvvvv */
+   /*Resolves the issue when iPhone links dates, addresses, phone numbers*/
+a {
+	color: inherit;
+	text-decoration: none;
+	outline: 0;
+}
+/*This resolves the Outlook 07, 10, and Gmail td padding issue fix*/
+table {
+	border-collapse: collapse !important;
+}
+/*This Resets Body Styles*/
+body {
+	height: auto !important;
+	margin: 0 auto;
+	padding: 0;
+}
+/*This CSS will make your web text look clean, crisp, and will not adjust text 13px and lower in mobile devices.*/
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	text-size-adjust: none;
+}
+.ReadMsgBody {
+	width: 100%;
+}
+.ExternalClass {
+	width: 100%;
+	line-height: 100%;
+}
+span.yshortcuts {
+	color: #000000;
+	background-color: none;
+	border: none;
+}
+span.yshortcuts:hover, span.yshortcuts:active, span.yshortcuts:focus {
+	color: #000;
+	background-color: none;
+	border: none;
+}
+.eoa_93x {
+	width: 100% !important;
+}
+div, p, a, li, td {
+	-webkit-text-size-adjust: none;
+}
+ @media only screen and (max-width: 480px) {
+.full {
+	width: 320px !important;
+}
+.fullbgcolor {
+	width: 320px !important;
+	background-color: #f2f2f2 !important;
+}
+.hidden {
+	width: 0px !important;
+	display: none !important;
+	font-size: 0px !important;
+	max-height: 0px !important;
+	mso-hide: all !important;
+	overflow: hidden !important;
+	border: none !important;
+}
+.show {
+	display: block !important;
+	margin: 0;
+	padding: 0;
+	overflow : visible !important;
+	width: auto !important;
+	max-height: inherit !important;
+}
+.width320_12 {
+	width: 320px !important;
+	display: block !important;
+	font-size: 12px !important;
+}
+.mobilePadding {
+	padding: 10px 0 20px 0 !important;
+}
+.fontDrop {
+	font-size: 13px !important;
+	padding: 0 !important;
+}
+.coupontext {
+	font-size: 23px !important;
+	mso-line-height-rule: exactly !important;
+	line-height: 25px !important;
+}
+.drop {
+	width: 100% !important;
+	display: block !important;
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+	padding-bottom: 5px !important;
+	padding-top: 3px !important;
+}
+.drop2 {
+	width: 100% !important;
+	display: block !important;
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	padding-bottom: 0px !important;
+	padding-top: 15px !important;
+}
+.drop3 {
+	width: 100% !important;
+	display: block !important;
+	padding-right: 25px !important;
+	padding-left: 0px !important;
+	padding-bottom: 5px !important;
+	padding-top: 15px !important;
+}
+.drop4 {
+	width: 100% !important;
+	display: block !important;
+	padding-right: 25px !important;
+	padding-left: 20px !important;
+	padding-bottom: 5px !important;
+	padding-top: 15px !important;
+}
+.applynowtxt {
+	padding-left: 50px !important;
+	padding-right: 50px !important;
+}
+.padtop10 {
+	padding-top: 10px !important;
+}
+.padsides {
+	padding: 0 20px 20px 25px !important;
+	font-size: 16px !important;
+	line-height: 18px !important;
+}
+.mobilepad {
+	padding: 0 !important;
+	margin: 0 !important;
+	display: block !important;
+}
+.textcenter {
+	text-align: center !important;
+}
+.textleft {
+	text-align: left !important;
+	padding:0px 0px 0px 0px !important;
+}
+}
+</style>
+%%[
+
+set @subjectline = "SUBJECTLINE HERE!"
+
+set @AMPScript = "AMPScript"
+
+if recip_type == "proof" then
+  set @subjectline = concat("[Email Name-",emailtype,"-proof] ",@subjectline)
+endif
+]%%
+  </head>
+  <body style="margin:0; padding:0; width:100% !important;">
+<div style="display:none;">
+    <custom name="opencounter" type="tracking">
+  </div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f2f2f2">
+    <tr>
+    <td align="center" valign="top"><table class="full" width="600" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#f2f2f2">
+        <tr>
+          <td align="center" valign="top" bgcolor="#f2f2f2"><table class="full" align="center" width="600" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td valign="top" bgcolor="#f2f2f2"><table class="fullbgcolor" align="center" cellpadding="0" cellspacing="0" border="0" width="600" bgcolor="#ffffff">
+                    <tr>
+                      <td align="left" valign="top" style="padding:0 0 0 0;"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                          <tr>
+                            <td class="dropBody textcenter" align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; mso-line-height-rule:exactly; line-height:15px; color:#323232; padding:2px 0 2px 10px;">Lorem ipsum dolor sit amet</td>
+                          </tr>
+                          <tr>
+                            <td class="dropBody textcenter" align="left" valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size:11px; mso-line-height-rule:exactly; line-height:15px; color:#323232; padding:0 0 10px 10px;">%%[if _messagecontext != "VAWP" THEN ]%%
+                              consectetur adipiscing elit, <a href="TBD" alias=="" style="color:#373E9E; text-decoration:underline;" target="_blank">consectetur elit</a> %%[endif]%%</td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td class="dropBody" align="center" valign="top" style="padding:15px 0 15px 0;"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                          <tr>
+                            <td align="center" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#323232; padding:0 0 0 0;"><img src="https://via.placeholder.com/150x29" alt="" width="152" height="29" border="0" style="display:block;" /></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table>
+                  <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td class="hidden" align="center" valign="top" style="padding:0 0 0 0; border-bottom:10px #f2f2f2 solid; display:block;"><img src="https://via.placeholder.com/600x214" alt="" width="600" height="214" border="0" /></td>
+                    </tr>
+                    <tr>
+                      <td align="center" valign="top"><!--[if !mso]><!--> 
+                        <!-- Mobile hero : Begin -->
+                        
+                        <div class="show" style="display:none; margin:0; padding:0; width:0px; max-height:0px; overflow:hidden; font-size:0; line-height:0;">
+                          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tr>
+                              <td align="center" valign="top"><img src="https://via.placeholder.com/340x200" alt="" width="340" height="200" border="0" /></td>
+                            </tr>
+                          </table>
+                        </div>
+                        
+                        <!-- Mobile Logos : End --> 
+                        <!--<![endif]--></td>
+                    </tr>
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                          <tr>
+                            <td align="center" valign="top" style="padding:3px 0 0 0;"><table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff">
+                                <tr>
+                                  <td align="center" valign="top" style="padding:35px 0 0 0;"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                      <tr>
+                                        <td align="left" valign="top" bgcolor="#FFFFFF" style="padding:0 10px 15px 10px;"><table cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                              <td align="left" valign="top" style="padding:0 25px 15px 20px;"><img src="https://via.placeholder.com/52x52" alt="" width="52" height="52" border="0" style="display:block;" /></td>
+                                              <td align="left" valign="top" style="font-family:Helvetica, Arial, sans-serif; color:#373E9E; font-size:20px; mso-line-height-rule:exactly; line-height:28px; padding:0 0 15px 0; font-weight:bold;">sed do eiusmod tempor&nbsp;incididunt<br />
+                                                <span style="font-family:Helvetica, Arial, sans-serif; color:#333333; font-size:20px; mso-line-height-rule:exactly; padding:0; font-weight:normal;">tempor incididunt ut labore et dolore magna<br />
+                                                Lorem ipsum </span><span style="color:#333333;">%%=v(@AMPScript)=%%</span><span style="color:#333333; font-style:normal;">.</span></td>
+                                            </tr>
+                                          </table></td>
+                                      </tr>
+                                    </table>
+                                    <table width="90%" cellpadding="4" cellspacing="0" border="0" bgcolor="#FFFFFF" >
+                                      <tr>
+                                        <td align="center" valign="top" bgcolor="#ffffff" style="border:3px #CCCCCC dotted;"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                              <td class="fontDrop" align="center" bgcolor="#f0f0f0" valign="top"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                  <tr>
+                                                    <td class="coupontext" style="padding:13px 7px 13px 7px; font-family:Arial, Helvetica, sans-serif; color:#373E9E; font-size:21px; mso-line-height-rule:exactly; line-height:28px; font-weight: bold; text-align: center;">dolore magna&nbsp;aliqua.: %%=v(@AMPScript)=%%</td>
+                                                  </tr>
+                                                </table></td>
+                                            </tr>
+                                          </table></td>
+                                      </tr>
+                                    </table></td>
+                                </tr>
+                                <tr>
+                                  <td align="center" valign="middle" bgcolor="#FFFFFF" style="padding:25px 12px 0 12px;"><a href="TBD" conversion="true" target="_blank" alias="ALT TEXT HERE" style="color:#3953a4; text-decoration:underline;"> <img src="https://via.placeholder.com/300x50" alt="" width="300" height="50" border="0" style="display:block;" /></a></td>
+                                </tr>
+                                <tr>
+                                  <td align="center" valign="middle" bgcolor="#FFFFFF" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:22px; color:#373E9E; padding:14px 12px 0 12px;">sed do eiusmod tempor incididunt</td>
+                                </tr>
+                                <tr>
+                                  <td align="center" valign="middle" bgcolor="#FFFFFF" style="font-family:Arial, Helvetica, sans-serif; font-size:16px; mso-line-height-rule:exactly; line-height:65px; color:#3953a4; padding:21px 12px 24px 12px;"><a href="TBD" target="_blank" alias="" conversion="true" style="color:#3953a4; text-decoration:underline;"> <img src="https://via.placeholder.com/300x50" alt="" width="300" height="50" border="0" style="display:block;" /></a></td>
+                                </tr>
+                                <tr>
+                                  <td align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; color:#4a4a4a; font-size:16px; mso-line-height-rule:exactly; line-height:1.4em; padding:0 0 18px 0;" class="applynowtxt">incididunt ut labore et dolore magna&nbsp;aliqua.</td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                          <tr>
+                            <td align="center" valign="top" style="padding:5px 0 0 0;"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                  <td align="left" valign="top" bgcolor="#FFFFFF" style="padding:35px 10px 15px 10px;  border-bottom:1px solid #f3f3f3;"><table cellpadding="0" cellspacing="0" border="0">
+                                      <tr>
+                                        <td align="left" valign="top" style="padding:0 25px 15px 20px;"><img src="https://via.placeholder.com/52x52" alt="" width="52" height="52" border="0" style="display:block;" /></td>
+                                        <td align="left" valign="top" style="font-family:Helvetica, Arial, sans-serif; color:#4a4a4a; font-size:20px; mso-line-height-rule:exactly; line-height:28px; padding:0 0 3px 0;"><span style="color:#373E9E; font-weight: bold;">ut labore et dolore magna&nbsp;aliqua.</span> <br />
+                                          Lorem ipsum dolor sit amet, consectetur<br />
+                                          <br /></td>
+                                      </tr>
+                                    </table></td>
+                                </tr>
+                                <tr>
+                                  <td align="center" bgcolor="#FFFFFF" valign="top" style="border-bottom:1px solid #f3f3f3;"><table cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+                                      <tr>
+                                        <td class="drop" align="center" valign="middle"><table cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                              <td class="drop2" height="140" align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#174477; padding-left:50px; padding:23px 0px 25px 60px;"><img src="https://via.placeholder.com/140x140" width="140" height="140" border="0" style="display:block; mso-line-height-rule:exactly; line-height:110px;" alt="" /></td>
+                                            </tr>
+                                          </table></td>
+                                        <td class="drop" align="left" valign="middle" width="100%" bgcolor="#FFFFFF"><table cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                              <td class="drop3" align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#4d4d4f; padding:0px 60px 20px 40px; mso-line-height-rule:exactly; line-height:20px; "><div class="padsides"><span style="color:#373E9E; font-size:16px; font-weight:bold;">adipiscing elit</span><br />
+                                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<sup style="mso-line-height-rule:exactly; line-height:0; font-size:8px;"><!--[if (gte mso 9) | (IE 7)]><span style="font-size: 12px; vertical-align: 0px;"><![endif]-->&reg;<!--[if (gte mso 9) | (IE 7)]></span><![endif]--></sup> Lorem <a href="#sup1" style="color:#4d4d4f; text-decoration: none;">&sup1;</a>ipsum dolor sit amet,<a href="#sup2" style="color:#4d4d4f; text-decoration: none;">&sup2;</a>,<strong>sed</strong></div></td>
+                                            </tr>
+                                          </table></td>
+                                      </tr>
+                                    </table></td>
+                                </tr>
+                                <tr>
+                                  <td align="center" bgcolor="#FFFFFF" valign="top" style="border-bottom:1px solid #f3f3f3;"><table cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+                                      <tr>
+                                        <td class="drop" align="center" valign="middle"><table cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                              <td class="drop3" height="140" align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#174477; padding-left:50px; padding:0px 0px 0px 60px;"><img src="https://via.placeholder.com/140x140" width="140" height="140" border="0" style="display:block; mso-line-height-rule:exactly; line-height:110px;" alt="" /></td>
+                                            </tr>
+                                          </table></td>
+                                        <td class="drop" align="left" valign="middle" width="100%" bgcolor="#FFFFFF"><table cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                              <td class="drop" align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#4d4d4f; padding:10px 60px 20px 40px; mso-line-height-rule:exactly; line-height:20px; "><div class="padsides"><span style="color:#373E9E; font-size:16px; font-weight:bold;">magna aliqua.</span><br />
+                                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<sup style="mso-line-height-rule:exactly; line-height:0; font-size:8px;"><!--[if (gte mso 9) | (IE 7)]><span style="font-size: 12px; vertical-align: 0px;"><![endif]-->et<!--[if (gte mso 9) | (IE 7)]></span><![endif]--></sup>aliqua<a href="#sup1" style="color:#4d4d4f; text-decoration: none;">&sup1;</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<a href="#sup2" style="color:#4d4d4f; text-decoration: none;">&sup2;</a>,<strong>do</strong></div></td>
+                                            </tr>
+                                          </table></td>
+                                      </tr>
+                                    </table></td>
+                                </tr>
+                                <tr>
+                                  <td align="center" bgcolor="#FFFFFF" valign="top" style="border-bottom:1px solid #f3f3f3;"><table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" width="100%">
+                                      <tr>
+                                        <td class="drop" align="center" valign="middle"><table cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                              <td class="drop2" height="140" align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#174477; padding:25px 0px 25px 60px;"><img src="https://via.placeholder.com/140x140" width="140" height="140" border="0" style="display:block; mso-line-height-rule:exactly; line-height:110px;" alt="" /></td>
+                                            </tr>
+                                          </table></td>
+                                        <td class="drop textleft" align="left" valign="middle" width="100%" bgcolor="#ffffff"><table cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                              <td class="drop4" align="left" valign="top" bgcolor="#ffffff" style="font-family:Helvetica, Arial, sans-serif; color:#373E9E; font-size:20px; mso-line-height-rule:exactly; line-height:32px; padding:20px 10px 20px 40px;"><strong>Lorem <span style="font-size:30px;">ipsum</span> dolor</strong></td>
+                                            </tr>
+                                          </table></td>
+                                      </tr>
+                                    </table></td>
+                                </tr>
+                              </table>
+                              <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                  <td align="center" valign="top" bgcolor="#FFFFFF" style="font-family:Helvetica, Arial, sans-serif; color:#373E9E; font-size:15px; display:block; mso-line-height-rule:exactly; line-height:19px; padding:13px 0 8px 0;"><a href="#jumpTo" class="moblieLink" alias="" conversion="true" style="color:#373E9E; text-decoration:underline;"><strong>jumpTo Link</strong></a></td>
+                                </tr>
+                                <!--<![endif]-->
+                              </table></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                          <tr>
+                            <td align="center" valign="top" style="padding:3px 0px 3px;"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                  <td align="center" valign="top" style="padding:5px 0 0 0;"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                      <tr>
+                                        <td align="left" valign="top" bgcolor="#FFFFFF" style="padding:35px 10px 15px 10px;"><table cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                              <td align="left" valign="top" style="padding:0 25px 15px 20px;"><img src="https://via.placeholder.com/52x52" alt="" width="52" height="52" border="0" style="display:block;" /></td>
+                                              <td align="left" valign="top" style="font-family:Helvetica, Arial, sans-serif; color:#4a4a4a; font-size:20px; mso-line-height-rule:exactly; line-height:28px; padding:0 0 3px 0;"><span style="color:#373E9E; font-weight: bold;">dolore magna aliqua.</span><br />
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
+                                                <br />
+                                                et dolore magna aliqua. <a href="TBD" alias="" target="_blank" style="text-decoration:underline; color:#373E9E; white-space:nowrap;" conversion="true">Lorem ipsum dolor</a>. <br />
+                                                <br /></td>
+                                            </tr>
+                                          </table></td>
+                                      </tr>
+                                    </table></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12.5px; mso-line-height-rule:exactly; line-height:14px; color:#333333; padding:10px 0px 5px 0px;"><a href="TBD" target="_blank" alias="" conversion="true" style="color:#333333; text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</a></td>
+                    </tr>
+                    <tr>
+                      <td class="mobilePadding" align="center" valign="top" style="padding: 10px 0 30px 0;" ><table cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td class="width320_12" align="center" valign="top" style="font-family:Arial, sans-serif; color:#373E9E; font-size:13px; mso-line-height-rule:exactly; line-height:18px; padding:0 0 0 0;"><a href="TBD" target="_blank" alias="" conversion="true" style="color:#373E9E; text-decoration:none; text-decoration:underline;">Lorem ipsum</a><span style="color:#333333;"> | </span><a href="TBD" target="_blank" alias="" conversion="true" style="color:#373E9E; text-decoration:none; text-decoration:underline;">dolor sit amet</a><span style="color:#333333;"> | </span><a href="TBD" target="_blank" alias="" conversion="true" style="color:#373E9E; text-decoration:none; text-decoration:underline;">consectetur</a><span style="color:#333333;"> | </span><a href="TBD" target="_blank" alias="" conversion="true" style="color:#373E9E; text-decoration:none; text-decoration:underline;">magna</a></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                          <tr>
+                            <td align="left" valign="top"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                  <td align="left" valign="top"><table cellpadding="0" cellspacing="0" border="0">
+                                      <tr>
+                                        <td align="left" valign="top" bgcolor="#373E9E" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:14px; color:#ffffff; padding:7px 10px 7px 12px;">dolore magna aliqua.</td>
+                                      </tr>
+                                    </table></td>
+                                </tr>
+                                <tr>
+                                  <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:14px; color:#65666b; padding:15px 12px 15px 12px;"> Lorem ipsum dolor: <a href="mailto:%%=v(@AMPScript)=%%" target="_blank" alias="" style="color:#65666b; text-decoration:none;">%%=v(@AMPScript)=%%</a></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table>
+                  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td id="jumpTo" align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; mso-line-height-rule:exactly; line-height:18px; color:#65666b; padding:15px 12px 20px 0;"><a href="#jumpToLink" name="jumpTo" alias="" style="color:#174477; text-decoration:none;">&#8203;</a><span style="color:#373E9E;">Link to jumpTo</span> <br />
+                        <br />
+                        <span style="color:#65666b;"><strong><a name="sup1" id="sup1" style="color:#4d4d4f; text-decoration: none;">&sup1;</a></strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
+                        <br />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
+                        <br />
+                        <strong><a name="sup2" id="sup2" style="color:#4d4d4f; text-decoration: none;">&sup2;</a></strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
+                        <br />
+                        Address of Organization <br />
+                        &copy; %%=Format(Now(), "yyyy")=%%</span></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  </table>
+</body>
+</html>
